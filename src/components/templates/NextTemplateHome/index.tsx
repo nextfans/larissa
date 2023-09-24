@@ -43,7 +43,7 @@ export const NextTemplateHome = ({
           ))}
         </Box>
         <Text fontSize={'xs'} fontStyle={'italic'}>
-          * Se quiser deixar algum texto aqui
+          * Se quiser deixar algum texto aqui como imagem ou algo do tipo
         </Text>
       </Container>
     </NextLayout>
