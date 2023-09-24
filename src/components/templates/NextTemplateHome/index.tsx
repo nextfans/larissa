@@ -43,8 +43,7 @@ export const NextTemplateHome = ({
           ))}
         </Box>
         <Text fontSize={'xs'} fontStyle={'italic'}>
-          * As imagens desta página foram criadas utilizando a tecnologia de
-          inteligência artificial midjourney.
+          * Se quiser deixar algum texto aqui
         </Text>
       </Container>
     </NextLayout>
