@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://club.nextime.com.br/
+
+# Sitemaps
+Sitemap: https://club.nextime.com.br/sitemap.xml
+Sitemap: https://club.nextime.com.br/server-sitemap.xml
