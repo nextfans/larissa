@@ -95,10 +95,7 @@ export const NextArticleList = ({ posts }: { posts: Post[] }) => {
                 marginLeft={{ base: '0', sm: '5%' }}
                 marginTop="5%"
               >
-                <Link
-                  href={`/blog/${post.slug}`}
-                  aria-label="Leias sobre novidades na tecnologia em nosso blog"
-                >
+                <Link href={`/novidades/${post.slug}`} aria-label="">
                   <Box borderRadius="2xl">
                     <Image
                       style={{ objectFit: 'contain' }}
@@ -129,14 +126,14 @@ export const NextArticleList = ({ posts }: { posts: Post[] }) => {
             marginTop={{ base: '3', sm: '0' }}
             pb={4}
           >
-            {post?.tags && (
+            {/* {post?.tags && (
               <Box display={['none', 'block']}>
                 <BlogTags tags={post.tags} />
               </Box>
-            )}
+            )} */}
             <Heading fontSize={['md', '4xl']} marginTop="1">
               <Link
-                href={`/blog/${post.slug}`}
+                href={`/novidades/${post.slug}`}
                 aria-label={`Leias sobre ${post.title}`}
               >
                 {post?.title}

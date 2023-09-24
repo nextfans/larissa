@@ -12,7 +12,6 @@ export const NextimeFooter = () => {
       color="white"
       fontSize="sm"
       bottom="0px"
-      position="fixed"
       w="100%"
       display={['block', 'flex']}
       alignItems="center"

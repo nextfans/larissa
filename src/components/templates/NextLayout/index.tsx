@@ -116,7 +116,7 @@ export function NextLayout({
 
         {!user ? (
           <>
-            <NextFooter bg={bg} />
+            <NextimeFooter />
             <Box
               position="fixed"
               width="60px"

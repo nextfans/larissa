@@ -14,7 +14,6 @@ query GetPosts {
     excerpt
     slug
     stage
-    tags
     title
     updatedAt
     coverImage {
@@ -25,9 +24,6 @@ query GetPosts {
     }
     content {
       text
-    }
-    seo {
-      keywords
     }
   }
 }

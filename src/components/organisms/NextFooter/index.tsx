@@ -139,22 +139,22 @@ export const NextFooter = ({ bg = 'next-primary' }: NextFooterProps) => {
                 </Link>
               </HStack>
             </Box>
-            <Box display={['none', 'block']}>
+            {/* <Box display={['none', 'block']}>
               <Image
                 src="/images/logos/logo_500.png"
                 alt="NeXTIME Logo"
                 width={300}
                 height={300}
               />
-            </Box>
-            <Box display={['none', 'block']}>
+            </Box> */}
+            {/* <Box display={['none', 'block']}>
               <Image
                 src="/images/logos/logo_footer.svg"
                 alt="NeXTIME Logo"
                 width={300}
                 height={300}
               />
-            </Box>
+            </Box> */}
           </Flex>
         </Container>
       </Box>

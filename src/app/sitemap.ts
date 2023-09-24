@@ -20,12 +20,12 @@ export default async function sitemap() {
 
   const posts = data.posts.map(
     ({ slug, date }: { slug: string; date: string }) => ({
-      url: `${URL}/blog/${slug}`,
+      url: `${URL}/novidades/${slug}`,
       lastModified: date,
     }),
   )
 
-  const routes = ['', '/invite', '/login', '/subscription', '/blog'].map(
+  const routes = ['', '/invite', '/login', '/subscription', '/novidades'].map(
     (route) => ({
       url: `${URL}${route}`,
       lastModified: new Date().toISOString(),

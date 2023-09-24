@@ -57,16 +57,22 @@ interface Post {
 }
 
 async function getProduct(slug: string) {
-  const response = await fetch(
-    'https://api-sa-east-1.hygraph.com/v2/cla8hu6xn0t2y01umbdl26klh/master',
-    {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-      body: JSON.stringify({
-        query: `{
+  const apolloUri = process.env.NEXT_PUBLIC_APOLLO_URI as string
+
+  if (!apolloUri) {
+    throw new Error(
+      'A variável de ambiente NEXT_PUBLIC_APOLLO_URI não está definida.',
+    )
+  }
+
+  const response = await fetch(apolloUri, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+    },
+    body: JSON.stringify({
+      query: `{
             posts(where: { slug: "${slug}"}) {
               id
               author {
@@ -84,7 +90,6 @@ async function getProduct(slug: string) {
               excerpt
               slug
               stage
-              tags
               title
               updatedAt
               coverImage {
@@ -96,19 +101,13 @@ async function getProduct(slug: string) {
               content {
                 html
               }
-              seo {
-                description
-                keywords
-                id
-              }
             }
           }`,
-        variables: {
-          slug,
-        },
-      }),
-    },
-  )
+      variables: {
+        slug,
+      },
+    }),
+  })
   const { data } = await response.json()
   return data.posts[0] as Post
 }

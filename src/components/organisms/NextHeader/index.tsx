@@ -83,12 +83,12 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: 'Home',
+    label: '🏠 Home',
     href: '/',
   },
   {
-    label: 'Blog',
-    href: '/blog',
+    label: '✨ Novidades',
+    href: '/novidades',
   },
 ]
 
@@ -232,7 +232,7 @@ const NAV_ITEMS_LOGGED: Array<NavItem> = [
 ]
 
 export const NextHeader = ({
-  logoSrc = '/images/logos/logo.svg',
+  logoSrc = '/images/logos/logo_500.png',
   logoWidth = 50,
   logoHeight = 50,
   logoAlt = 'NeXTIME Logo',
@@ -275,7 +275,7 @@ export const NextHeader = ({
       <Container maxW="container.lg">
         <Flex minH={'50px'} align={'center'}>
           <Flex justify={{ base: 'center' }} alignItems={'center'}>
-            {logoSrc === '/images/logos/logo.svg' && (
+            {/* {logoSrc === '/images/logos/logo_500.png' && (
               <Image
                 src={logoSrc}
                 alt={logoAlt}
@@ -283,7 +283,7 @@ export const NextHeader = ({
                 height={logoHeight}
                 priority
               />
-            )}
+            )} */}
             {logoSrc === '/images/logos/next.svg' && (
               <NextLogo colorPrimary={'primary'} color={'primary'} />
             )}
@@ -297,11 +297,11 @@ export const NextHeader = ({
                 <Text
                   as={'h2'}
                   color={logoSubtitleColor}
-                  fontSize={{ base: 'md', lg: 'xl' }}
+                  fontSize={{ base: 'lg', lg: 'xl' }}
                 >
                   {logoSubtitle}
                 </Text>
-                <Text as={'span'}>Rock dos Solteiros</Text>
+                <Text as={'span'}>SUMPANI</Text>
               </Flex>
             )}
           </Flex>

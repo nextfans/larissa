@@ -11,7 +11,6 @@ async function getPost() {
         id
         slug
         date
-        tags
         excerpt
         title
         author {
@@ -40,21 +39,10 @@ export default async function Blog() {
   return (
     <NextLayout
       isRouterProtect={false}
-      title="Blog NeXTIME | Tecnologia, Inovação e Dicas"
-      description="Descubra o blog da NeXTIME, onde compartilhamos insights sobre tecnologias inovadoras e soluções que economizam tempo, melhoram a vida e impulsionam a mudança no mundo."
-      keywords={[
-        'nextime',
-        'tecnologia',
-        'blog',
-        'economizar tempo',
-        'dicas',
-        'produtividade',
-        'software',
-        'soluções',
-        'desenvolvimento',
-        'educação',
-      ]}
-      pathname="/blog"
+      title=""
+      description=""
+      keywords={['larissasumpani']}
+      pathname="/novidades"
     >
       <NextArticleList posts={posts} />
     </NextLayout>
